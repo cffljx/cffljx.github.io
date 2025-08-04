@@ -1,3 +1,6 @@
+http://example.com/2025/08/04/Docker/
+http://example.com/2025/08/03/AI/
+http://example.com/2025/08/03/Python/
 http://example.com/2025/08/03/hello-world/
 http://example.com/2025/08/03/git/
 http://example.com/

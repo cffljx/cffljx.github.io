@@ -1,0 +1,1065 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="阿布">
+  <meta name="keywords" content="学习、生活">
+  
+    <meta name="description" content="Ubuntu Servervim常用命令一、基本操作命令  :w 保存当前文件 :wq或:x 保存并退出Vim :q 退出Vim，如果文件有未保存的修改，会提示确认 :q! 强制退出Vim，不保存当前文件的修改  二、光标移动命令  h 光标向左移动一个字符  j 光标向下移动一行  k 光标向上移动一行  l 光标向右移动一个字符  gg 将光标跳转到文件的第一行  G 将光标跳转到文件的最后一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dock学习">
+<meta property="og:url" content="http://example.com/2025/08/04/Docker/index.html">
+<meta property="og:site_name" content="Cffljx的学习空间">
+<meta property="og:description" content="Ubuntu Servervim常用命令一、基本操作命令  :w 保存当前文件 :wq或:x 保存并退出Vim :q 退出Vim，如果文件有未保存的修改，会提示确认 :q! 强制退出Vim，不保存当前文件的修改  二、光标移动命令  h 光标向左移动一个字符  j 光标向下移动一行  k 光标向上移动一行  l 光标向右移动一个字符  gg 将光标跳转到文件的第一行  G 将光标跳转到文件的最后一">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-04T02:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-04T02:54:51.000Z">
+<meta property="article:author" content="阿布">
+<meta property="article:tag" content="学习、生活">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Dock学习 - Cffljx的学习空间</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Cffljx的学习空间" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Cffljx</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Dock学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-04 10:00" pubdate>
+          2025年8月4日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          73 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Dock学习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Ubuntu-Server"><a href="#Ubuntu-Server" class="headerlink" title="Ubuntu Server"></a>Ubuntu Server</h1><h2 id="vim常用命令"><a href="#vim常用命令" class="headerlink" title="vim常用命令"></a>vim常用命令</h2><p>一、基本操作命令</p>
+<ul>
+<li>:w 保存当前文件</li>
+<li>:wq或:x 保存并退出Vim</li>
+<li>:q 退出Vim，如果文件有未保存的修改，会提示确认</li>
+<li>:q! 强制退出Vim，不保存当前文件的修改</li>
+</ul>
+<p>二、光标移动命令</p>
+<ul>
+<li><p>h 光标向左移动一个字符</p>
+</li>
+<li><p>j 光标向下移动一行</p>
+</li>
+<li><p>k 光标向上移动一行</p>
+</li>
+<li><p>l 光标向右移动一个字符</p>
+</li>
+<li><p>gg 将光标跳转到文件的第一行</p>
+</li>
+<li><p>G 将光标跳转到文件的最后一行</p>
+</li>
+<li><p>数字+G 将光标跳转到数字指定的行</p>
+</li>
+</ul>
+<p>三、编辑命令</p>
+<ul>
+<li><p>i 进入插入模式，开始在当前光标位置插入文本</p>
+</li>
+<li><p>a 进入插入模式，在当前光标后插入文本</p>
+</li>
+<li><p>o 进入插入模式，在光标所在行的下一行插入文本</p>
+</li>
+<li><p>O 进入插入模式，在光标所在行的上一行插入文件</p>
+</li>
+<li><p>x 删除光标所在位置的字符</p>
+</li>
+<li><p>dd 删除光标所在行的一整行</p>
+</li>
+<li><p>D 删除从光标位置到行尾的文本</p>
+</li>
+<li><p>yy 复制光标所在行的一行文本</p>
+</li>
+<li><p>p 粘贴复制的文本到光标所在位置的下一行</p>
+</li>
+<li><p>u 撤消上一次的编辑操作</p>
+</li>
+<li><p>Ctrl+r 重做上一次撤销的编辑操作</p>
+</li>
+</ul>
+<p>四、查找和替换命令</p>
+<ul>
+<li>/查找文本 查找文件中的文本内容</li>
+<li>n 查找下一个匹配项</li>
+<li>N 查找上一个匹配项</li>
+<li>:s/旧文本/新文本/ 替换当前行中第一个匹配的旧文本为新文本</li>
+<li>%s/旧文本/新文本/g 替换整个文件中所有匹配的旧文本为新文本</li>
+</ul>
+<h2 id="使用root用户登录"><a href="#使用root用户登录" class="headerlink" title="使用root用户登录"></a>使用root用户登录</h2><figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs perl">sudo passwd root<br>先输入当前普通用户（如用户lxls）的密码，用于提权<br>然后再输入为root用户所设置的密码，输入两次，这样就完成设置root用户密码了<br>以root登录<br>su root<br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="解锁SSH用root登录"><a href="#解锁SSH用root登录" class="headerlink" title="解锁SSH用root登录"></a>解锁SSH用root登录</h2><figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs perl">vim /etc/ssh/sshd_config<br>找到相应代码行并注释<br><span class="hljs-comment">#PermitRootLogin prohibit-password</span><br>添加上<br>PermitRootLogin yes<br>保存修改，重启ssh服务<br>service ssh restart<br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="搭建FTP服务器"><a href="#搭建FTP服务器" class="headerlink" title="搭建FTP服务器"></a>搭建FTP服务器</h2><figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs perl">安装vsftpd：<br>apt install vsftpd<br><br>vsftpd服务将在安装过程完成后自动启动。通过打印服务状态进行验证：<br>systemctl status vsftpd<br><br>输出如下所示，表明vsftpd服务处于活动状态并正在运行：<br>● vsftpd.service - vsftpd FTP server<br>     Loaded: loaded (<span class="hljs-regexp">/usr/li</span>b/systemd/<span class="hljs-keyword">system</span>/vsftpd.service; enabled; preset: enabled)<br>     Active: active (running) since Mon <span class="hljs-number">2025</span>-<span class="hljs-number">07</span>-<span class="hljs-number">28</span> <span class="hljs-number">01</span>:<span class="hljs-number">13</span>:<span class="hljs-number">07</span> UTC; 2h 24min ago<br>    Process: <span class="hljs-number">2416</span> ExecStartPre=<span class="hljs-regexp">/bin/m</span>kdir -p /var/run/vsftpd/empty (code=exited, status=<span class="hljs-number">0</span>/SUCCESS)<br>   Main PID: <span class="hljs-number">2418</span> (vsftpd)<br>      Tasks: <span class="hljs-number">3</span> (limit: <span class="hljs-number">19041</span>)<br>     Memory: <span class="hljs-number">1</span>.8M (peak: <span class="hljs-number">19</span>.3M)<br>        CPU: 862ms<br>     CGroup: <span class="hljs-regexp">/system.slice/</span>vsftpd.service<br>             ├─<span class="hljs-number">2418</span> /usr/sbin/vsftpd /etc/vsftpd.conf<br>             ├─<span class="hljs-number">2489</span> /usr/sbin/vsftpd /etc/vsftpd.conf<br>             └─<span class="hljs-number">2491</span> /usr/sbin/vsftpd /etc/vsftpd.conf<br>             <br>允许上传和删除：<br>修改vsftpd.conf文件：sudo vim /etc/vsftpd.conf，<br>将 <span class="hljs-comment">#write_enable=YES 前面的注释#去掉   </span><br><br>允许root登录FTP：<br>更改/etc/ftpusers，注释掉root用户：<br>sudo vim /etc/ftpusers<br><span class="hljs-comment">#root</span><br><br>在终端中重启FTP服务：<br>sudo /etc/init.d/vsftpd restart 或者运行<br>service vsftpd restart<br><br>确保vsftpd服务在系统启动时自动启动：<br>sudo systemctl enable vsftpd.service<br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="镜像源配置"><a href="#镜像源配置" class="headerlink" title="镜像源配置"></a>镜像源配置</h2><figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs dts">新格式支持：从 Ubuntu <span class="hljs-number">24.04</span> 开始，支持新的 DEB822 格式，需将配置写入软件源文件<span class="hljs-keyword">/etc/</span>apt/sources.list.d/ubuntu.sources 格式如下：<br><br><span class="hljs-meta"># 阿里云</span><br><span class="hljs-symbol">Types:</span> deb<br><span class="hljs-symbol">URIs:</span> http:<span class="hljs-comment">//mirrors.aliyun.com/ubuntu/</span><br><span class="hljs-symbol">Suites:</span> noble noble-updates noble-security<br><span class="hljs-symbol">Components:</span> main restricted universe multiverse<br>Signed-By: <span class="hljs-keyword">/usr/</span>share<span class="hljs-keyword">/keyrings/</span>ubuntu-archive-keyring.gpg<br><br>更新完软件源后即可使用更新后的镜像源~<br>更新软件源：<br>sudo apt-get update<br><br>更新软件（可选）：<br>sudo apt-get upgrade<br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="网卡启动及配置"><a href="#网卡启动及配置" class="headerlink" title="网卡启动及配置"></a>网卡启动及配置</h2><ul>
+<li><p>安装网络管理工具</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">apt <span class="hljs-keyword">install</span> net-tools<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>查看网卡信息</p>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ip</span> a<br><span class="hljs-attribute">1</span>: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="hljs-number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/loopback <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> brd <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>/<span class="hljs-number">8</span> scope host lo<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br>    <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>/<span class="hljs-number">128</span> scope host noprefixroute<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><span class="hljs-attribute">2</span>: ens32: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="hljs-number">1500</span> qdisc fq_codel state UP group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether <span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:d6:<span class="hljs-number">8</span>e:<span class="hljs-number">66</span> brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-attribute">altname</span> enp2s0<br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">172.18.1.109</span>/<span class="hljs-number">22</span> metric <span class="hljs-number">100</span> brd <span class="hljs-number">172.18.3.255</span> scope global dynamic ens32<br>       <span class="hljs-attribute">valid_lft</span> <span class="hljs-number">86339</span>sec preferred_lft <span class="hljs-number">86339</span>sec<br>    <span class="hljs-attribute">inet6</span> fe80::<span class="hljs-number">20</span>c:<span class="hljs-number">29</span>ff:fed6:<span class="hljs-number">8</span>e66/<span class="hljs-number">64</span> scope link<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><span class="hljs-attribute">3</span>: ens33: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="hljs-number">1500</span> qdisc fq_codel state UP group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether <span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:d6:<span class="hljs-number">8</span>e:<span class="hljs-number">70</span> brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-attribute">altname</span> enp2s1<br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">11.82.10.99</span>/<span class="hljs-number">24</span> brd <span class="hljs-number">11.82.10.255</span> scope global ens33<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br>    <span class="hljs-attribute">inet6</span> fe80::<span class="hljs-number">20</span>c:<span class="hljs-number">29</span>ff:fed6:<span class="hljs-number">8</span>e70/<span class="hljs-number">64</span> scope link<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>打开网卡</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> ip <span class="hljs-built_in">link</span> <span class="hljs-built_in">set</span> eth0 up<br><span class="hljs-comment"># eth0是根据查看网卡信息得到的，你的机器需要跟据实际显示作出修改，up如果换成down就是关闭网卡</span><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>配置双网卡并设置静态路由</p>
+<figure class="highlight nix"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix">ubuntu server <span class="hljs-number">20.04</span> 采用读yaml配置文件的方式修改网卡配置，文件在<span class="hljs-operator">/</span>etc<span class="hljs-operator">/</span>netplan<span class="hljs-operator">/</span>下，一般为 <span class="hljs-number">0</span>0-installer-config.yaml，我的为：<br>root@lxls:<span class="hljs-operator">/</span>etc<span class="hljs-operator">/</span>netplan<span class="hljs-comment"># l</span><br><span class="hljs-number">5</span>0-cloud-init.yaml<br>用vim编辑，在文件末尾添加另一块网卡，修改为静态ip,最终修改内容：<br><br>root@lxls:<span class="hljs-operator">/</span>etc<span class="hljs-operator">/</span>netplan<span class="hljs-comment"># cat 50*</span><br><span class="hljs-params">network:</span><br>  <span class="hljs-params">version:</span> <span class="hljs-number">2</span><br>  <span class="hljs-params">ethernets:</span><br>    <span class="hljs-params">ens32:</span><br>      <span class="hljs-params">dhcp4:</span> <span class="hljs-literal">true</span>    <span class="hljs-comment">#动态获取的IP地址，会自动配置网关、路由表和域名地址</span><br>    <span class="hljs-params">ens33:</span><br>      <span class="hljs-params">dhcp4:</span> no<br>      <span class="hljs-params">addresses:</span> [<span class="hljs-number">11.82</span>.<span class="hljs-number">10.99</span><span class="hljs-operator">/</span><span class="hljs-number">24</span>]      <br>      <span class="hljs-params">routes:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-params">to:</span> <span class="hljs-number">10.0</span>.<span class="hljs-number">0.0</span><span class="hljs-symbol">/8</span>   <span class="hljs-comment"># 目标网络</span><br>          <span class="hljs-params">via:</span> <span class="hljs-number">11.82</span>.<span class="hljs-number">10.1</span>  <span class="hljs-comment"># 下一跳地址</span><br>        <span class="hljs-operator">-</span> <span class="hljs-params">to:</span> <span class="hljs-number">11.0</span>.<span class="hljs-number">0.0</span><span class="hljs-symbol">/8</span><br>          <span class="hljs-params">via:</span> <span class="hljs-number">11.82</span>.<span class="hljs-number">10.1</span><br>      <span class="hljs-params">nameservers:</span><br>            <span class="hljs-params">addresses:</span> [<span class="hljs-number">11.3</span>.<span class="hljs-number">127.13</span> ,<span class="hljs-number">11.3</span>.<span class="hljs-number">127.12</span>]<br>              <br>注意yaml对缩进和空格要求严格              <br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>应用更改</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> netplan apply<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>添加内网路由（临时起作用，重启后失效，想重启后仍生效参加上面：配置双网卡并设置静态路由）</p>
+<figure class="highlight accesslog"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">route add -net <span class="hljs-number">11</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>/<span class="hljs-number">8</span> gw <span class="hljs-number">11</span>.<span class="hljs-number">82</span>.<span class="hljs-number">10</span>.<span class="hljs-number">1</span> ens33<br>route add -net <span class="hljs-number">10</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>/<span class="hljs-number">8</span> gw <span class="hljs-number">11</span>.<span class="hljs-number">82</span>.<span class="hljs-number">10</span>.<span class="hljs-number">1</span> ens33<br><br>查看路由表：<br># route -n<br>Kernel IP routing table<br>Destination     Gateway         Genmask         Flags Metric Ref    Use Iface<br><span class="hljs-number">0.0.0.0</span>         <span class="hljs-number">172</span>.<span class="hljs-number">18</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>      <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>         UG    <span class="hljs-number">100</span>    <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens32<br><span class="hljs-number">10.0.0.0</span>        <span class="hljs-number">11</span>.<span class="hljs-number">82</span>.<span class="hljs-number">10</span>.<span class="hljs-number">1</span>      <span class="hljs-number">255</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>       UG    <span class="hljs-number">0</span>      <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens33<br><span class="hljs-number">11.0.0.0</span>        <span class="hljs-number">11</span>.<span class="hljs-number">82</span>.<span class="hljs-number">10</span>.<span class="hljs-number">1</span>      <span class="hljs-number">255</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>       UG    <span class="hljs-number">0</span>      <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens33<br><span class="hljs-number">11.82.10.0</span>      <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>         <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">0</span>   U     <span class="hljs-number">0</span>      <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens33<br><span class="hljs-number">114.114.114.114</span> <span class="hljs-number">172</span>.<span class="hljs-number">18</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>      <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span> UGH   <span class="hljs-number">100</span>    <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens32<br><span class="hljs-number">172.18.0.0</span>      <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>         <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">252</span>.<span class="hljs-number">0</span>   U     <span class="hljs-number">100</span>    <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens32<br><span class="hljs-number">172.18.0.1</span>      <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>         <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span> UH    <span class="hljs-number">100</span>    <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens32<br><span class="hljs-number">222.246.129.80</span>  <span class="hljs-number">172</span>.<span class="hljs-number">18</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>      <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span> UGH   <span class="hljs-number">100</span>    <span class="hljs-number">0</span>        <span class="hljs-number">0</span> ens32<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>删除路由命令</p>
+<figure class="highlight dos"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dos">sudo route <span class="hljs-built_in">del</span> -<span class="hljs-built_in">net</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> dev enp0s3<br>上述指令为删除指向互联网的默认路由。将所有数据包都通过enp0s3网卡的路由删除<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>查看主机网络连接端口</p>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># netstat -tunlp</span><br><span class="hljs-attribute">Active</span> Internet connections (only servers)<br><span class="hljs-attribute">Proto</span> Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name<br><span class="hljs-attribute">tcp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">127.0.0.53:53</span>           <span class="hljs-number">0.0.0.0</span>:*               LISTEN      <span class="hljs-number">874</span>/systemd-resolve<br><span class="hljs-attribute">tcp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">127.0.0.54:53</span>           <span class="hljs-number">0.0.0.0</span>:*               LISTEN      <span class="hljs-number">874</span>/systemd-resolve<br><span class="hljs-attribute">tcp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">0.0.0.0:22</span>              <span class="hljs-number">0.0.0.0</span>:*               LISTEN      <span class="hljs-number">1</span>/init<br><span class="hljs-attribute">tcp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">127.0.0.1:6012</span>          <span class="hljs-number">0.0.0.0</span>:*               LISTEN      <span class="hljs-number">5645</span>/sshd: root@pts<br><span class="hljs-attribute">tcp6</span>       <span class="hljs-number">0</span>      <span class="hljs-number">0</span> :::<span class="hljs-number">21</span>                   :::*                    LISTEN      <span class="hljs-number">1103</span>/vsftpd<br><span class="hljs-attribute">tcp6</span>       <span class="hljs-number">0</span>      <span class="hljs-number">0</span> :::<span class="hljs-number">22</span>                   :::*                    LISTEN      <span class="hljs-number">1</span>/init<br><span class="hljs-attribute">tcp6</span>       <span class="hljs-number">0</span>      <span class="hljs-number">0</span> ::<span class="hljs-number">1</span>:<span class="hljs-number">6012</span>                :::*                    LISTEN      <span class="hljs-number">5645</span>/sshd: root@pts<br><span class="hljs-attribute">udp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">127.0.0.54:53</span>           <span class="hljs-number">0.0.0.0</span>:*                           <span class="hljs-number">874</span>/systemd-resolve<br><span class="hljs-attribute">udp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">127.0.0.53:53</span>           <span class="hljs-number">0.0.0.0</span>:*                           <span class="hljs-number">874</span>/systemd-resolve<br><span class="hljs-attribute">udp</span>        <span class="hljs-number">0</span>      <span class="hljs-number">0</span> <span class="hljs-number">172.18.1.109:68</span>         <span class="hljs-number">0.0.0.0</span>:*                           <span class="hljs-number">789</span>/systemd-network<br><br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs perl">查看磁盘使用情况：<br><span class="hljs-comment"># df -h</span><br>Filesystem                         Size  Used Avail Use% Mounted on<br>tmpfs                              <span class="hljs-number">1</span>.2G  <span class="hljs-number">1</span>.6M  <span class="hljs-number">1</span>.2G   <span class="hljs-number">1</span>% <span class="hljs-regexp">/run</span><br><span class="hljs-regexp">/d</span>ev/mapper/ubuntu--vg-ubuntu--lv   98G  <span class="hljs-number">8</span>.2G   85G   <span class="hljs-number">9</span>% <span class="hljs-regexp">/</span><br><span class="hljs-regexp">tmpfs                              5.9G     0  5.9G   0% /d</span>ev/shm<br>tmpfs                              <span class="hljs-number">5</span>.0M     <span class="hljs-number">0</span>  <span class="hljs-number">5</span>.0M   <span class="hljs-number">0</span>% <span class="hljs-regexp">/run/l</span>ock<br>/dev/sda2                          <span class="hljs-number">2</span>.0G  100M  <span class="hljs-number">1</span>.7G   <span class="hljs-number">6</span>% <span class="hljs-regexp">/boot</span><br><span class="hljs-regexp">tmpfs                              1.2G   12K  1.2G   1% /run</span><span class="hljs-regexp">/user/</span><span class="hljs-number">0</span><br>overlay                             98G  <span class="hljs-number">8</span>.2G   85G   <span class="hljs-number">9</span>% <span class="hljs-regexp">/var/li</span>b/docker/overlay2/e15fb52a77f92480871a5ea8c73b13d23ad876f4364ec10bfb85cd1695081816/merged<br><br>查看所有磁盘及分区：<br>lsblk  <span class="hljs-comment"># 列出所有块设备（硬盘、分区、逻辑卷）</span><br>NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS<br>sda                         <span class="hljs-number">8</span>:<span class="hljs-number">0</span>    <span class="hljs-number">0</span>  500G  <span class="hljs-number">0</span> disk<br>├─sda1                      <span class="hljs-number">8</span>:<span class="hljs-number">1</span>    <span class="hljs-number">0</span>    1M  <span class="hljs-number">0</span> part<br>├─sda2                      <span class="hljs-number">8</span>:<span class="hljs-number">2</span>    <span class="hljs-number">0</span>    2G  <span class="hljs-number">0</span> part /boot<br>└─sda3                      <span class="hljs-number">8</span>:<span class="hljs-number">3</span>    <span class="hljs-number">0</span>  498G  <span class="hljs-number">0</span> part<br>  └─ubuntu--vg-ubuntu--lv <span class="hljs-number">252</span>:<span class="hljs-number">0</span>    <span class="hljs-number">0</span>  100G  <span class="hljs-number">0</span> lvm  /<br>sr0                        <span class="hljs-number">11</span>:<span class="hljs-number">0</span>    <span class="hljs-number">1</span> 1024M  <span class="hljs-number">0</span> rom<br><br><span class="hljs-comment"># 扩展逻辑卷，使用卷组中全部空闲空间</span><br>lvextend -l +<span class="hljs-number">100</span><span class="hljs-variable">%FREE</span> /dev/ubuntu-vg/ubuntu-lv<br><br><span class="hljs-comment"># 扩展文件系统，让操作系统识别新增的空间。Ubuntu 默认使用 ext4 文件系统，执行：</span><br>resize2fs /dev/ubuntu-vg/ubuntu-lv<br><span class="hljs-comment">#如果你的文件系统是 xfs（较少见，可通过 df -T / 确认），则使用 xfs_growfs / 替代</span><br><br>查看系统内核（即linux）版本：内核只有一个正统来源，那就是linus的开发团队，内核只提供操作系统的基本功能和特性，如内存管理、进度调度、文件管理等等<br>root<span class="hljs-variable">@lxls</span>:<span class="hljs-regexp">/etc/d</span>ocker<span class="hljs-comment"># uname -r</span><br><span class="hljs-number">6.8</span>.<span class="hljs-number">0</span>-<span class="hljs-number">64</span>-generic<br><br>查看ubuntu的发行版本：发行版是由不同的厂商开发、定制不同的功能<br>root<span class="hljs-variable">@lxls</span>:<span class="hljs-regexp">/etc/d</span>ocker<span class="hljs-comment"># cat /etc/lsb-release</span><br>DISTRIB_ID=Ubuntu<br>DISTRIB_RELEASE=<span class="hljs-number">24.04</span><br>DISTRIB_CODENAME=noble<br>DISTRIB_DESCRIPTION=<span class="hljs-string">"Ubuntu 24.04.2 LTS"</span><br><span class="hljs-comment">#一个完整的系统，是由liunx的内核+发行版，才组成了一个可以使用的完整的系统</span><br><br><span class="hljs-comment"># 查看进程，并过滤查看指定名称的进程</span><br>ps -ef|<span class="hljs-keyword">grep</span> nginx<br></code></pre></td></tr></tbody></table></figure>
+
+<h1 id="Docker国内镜像站"><a href="#Docker国内镜像站" class="headerlink" title="Docker国内镜像站"></a>Docker国内镜像站</h1><ul>
+<li><p>以下同一些常见的国内镜像站</p>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">Docker有多个国内镜像管理网站，以下是一些常见的介绍：<br><span class="hljs-number">1</span>. 毫秒镜像：官网为https:<span class="hljs-regexp">//</span>docker.<span class="hljs-number">1</span>ms.run，支持Cloudflare和境内CDN，搜索功能强大，配置简单且稳定。<br><span class="hljs-number">2</span>. 腾讯云Docker镜像源：官网是https:<span class="hljs-regexp">//mi</span>rror.ccs.tencentyun.com，仅限腾讯云服务器内访问，安全稳定。<br><span class="hljs-number">3</span>. DaoCloud官方镜像源：官网为https:<span class="hljs-regexp">//</span>docker.m.daocloud.io，依托阿里云，存在白名单和限流机制。<br><span class="hljs-number">4</span>. <span class="hljs-number">1</span>Panel镜像源：官网是https:<span class="hljs-regexp">//</span>docker.<span class="hljs-number">1</span>panel.live，有Cloudflare支持，但部分地区可能受限。<br><span class="hljs-number">5</span>. 轩辕镜像：免费版官网为https:<span class="hljs-regexp">//</span>docker.xuanyuan.me，会员版官网为https:<span class="hljs-regexp">//</span>xuanyuan.cloud，均采用Cloudflare+境内CDN，官网支持搜索镜像，配置简单，有会员解答群，屏蔽违法内容，由境内公司运营，非常稳定。<br><span class="hljs-number">6</span>. 阿里云镜像服务：官网为https:<span class="hljs-regexp">//</span>cr.console.aliyun.com，仅阿里云服务器内推荐使用。<br><span class="hljs-number">7</span>. 网易镜像源：地址为http:<span class="hljs-regexp">//</span>hub-mirror.c.<span class="hljs-number">163</span>.com，可以提供镜像加速服务。<br><span class="hljs-number">8</span>. 中国科技大学镜像站：地址是https:<span class="hljs-regexp">//</span>docker.mirrors.ustc.edu.cn，除了Docker镜像，还提供多种软件包的镜像服务，但仅供内部访问。<br><span class="hljs-number">9</span>. OpenAtom Hub：官网为https:<span class="hljs-regexp">//</span>atomhub.openatom.cn，其中的AtomHub可信镜像仓库平台包含部分基础镜像。<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>阿里云加速器地址</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://qyef4ruk.mirror.aliyuncs.com<br>Ubuntu下操作文档，通过修改daemon配置文件/etc/docker/daemon.json来使用加速器<br><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mkdir</span> -p /etc/docker<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">'EOF'</span><br>{<br>  <span class="hljs-string">"registry-mirrors"</span>: [<span class="hljs-string">"https://qyef4ruk.mirror.aliyuncs.com"</span>]<br>}<br>EOF<br><span class="hljs-built_in">sudo</span> systemctl daemon-reload<br><span class="hljs-built_in">sudo</span> systemctl restart docker<br><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>配置了国内镜像源（比如阿里的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=docker&amp;spm=1001.2101.3001.7020">docker</a>镜像源）是对 docker search 没有用的，因为docker命令最后还是通过他自己的地址搜索镜像，但是配置了国内镜像源可以加快 dockere pull 拉取镜像的速度。解决方法是指定镜像源地址搜索（绕过默认 API）：</p>
+<figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># 毫秒镜像</span><br>docker search docker<span class="hljs-number">.1</span>ms.<span class="hljs-built_in">run</span>/nginx<br><br><span class="hljs-comment"># 轩辕镜像源搜索 mysql</span><br>docker search hl1mitwelzr416b.xuanyuan.<span class="hljs-built_in">run</span>/mysql<br>docker search docker.xuanyuan.<span class="hljs-keyword">me</span>/nginx  <br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h1 id="使用Docker的优点"><a href="#使用Docker的优点" class="headerlink" title="使用Docker的优点"></a>使用Docker的优点</h1><ul>
+<li>容器对比KVM的好处：<ul>
+<li>容器能够提供宿主机的性能，而KVM虚拟机是分配宿主机硬件资源，性能较弱。</li>
+<li>同样配置的宿主机，最多可以启动10个虚拟机的话，那么就可以启动100+的容器数量。</li>
+<li>启动一个KVM虚拟机，得有一个完整的开机流程，花费时间较长，或许需要20秒，而启动一个容器只需要1秒。</li>
+<li>KVM需要硬件CPU的虚拟化支持，而容器不需要。</li>
+<li>容器不需要进行硬件虚拟化以及运行一个完整系统的额外开销，对系统资源利用率更高。</li>
+<li>Docker引擎容器在主机操作系统上作为一个独立的进程运行，与其它容器共享内核。</li>
+</ul>
+</li>
+</ul>
+<h1 id="Docker的安装部署"><a href="#Docker的安装部署" class="headerlink" title="Docker的安装部署"></a>Docker的安装部署</h1><ul>
+<li><p>Docker引擎：Docker Engine是C/S架构的。</p>
+</li>
+<li><p>Docker Daemon（守护进程），安装使用Docker，得先运行Docker Daemon，用于管理Docker，如：</p>
+<ul>
+<li>镜像 images，是一个只读的系统模板，用于创建容器，类似于编程开发中面向对象的类，构建容器的过程，就是运行镜像，生成容器实例。也可以通过Dockerfile文本描述镜像内容，将你要部署项目的操作，写成一个部署脚本，且该脚本还能够构建出镜像文件，包含如下的指令。<ul>
+<li>FROM 定义基础镜像</li>
+<li>MAINTAINER作者</li>
+<li>RUN 运行Linux命令</li>
+<li>ADD 添加文件/目录</li>
+<li>ENV 环境变量</li>
+<li>CMD 运行进程</li>
+</ul>
+</li>
+<li>容器 containers，是一个镜像运行的运行实例。你的应用程序就跑在容器中。</li>
+<li>网络 network</li>
+<li>数据卷 Data Volumes</li>
+</ul>
+</li>
+<li><p>Rest接口：提供和Daemon交互的API接口。（Representational State Transfer Application Programming Interface，表述性状态转移应用程序接口）是一种基于 HTTP 协议设计的软件架构风格，用于实现不同系统之间的通信和数据交互。它并非严格的标准，而是一套设计原则，旨在让接口更简洁、可扩展、易于理解和维护。</p>
+</li>
+<li><p>Docker Client：客户端（各种命令行操作）使用 REST API 和 Docker Daemon 进行访问。</p>
+</li>
+<li><p>Docker平台组成：客户端、Docker主机、镜像仓库。</p>
+<ul>
+<li>客户端：<ol>
+<li>基于Dockerfile构建自己的镜像</li>
+<li>下载别人的镜像Docker pull</li>
+<li>启动Docker容器</li>
+</ol>
+</li>
+<li>Docker主机：在服务器上通过启动镜像，生成运行着的容器</li>
+<li>镜像仓库（DockerHub）：是网络中的一个仓库，用于管理Docker的镜像Image，提供上传和下载功能，作用好比github</li>
+</ul>
+</li>
+<li><p>容器创建过程：</p>
+<ul>
+<li>获取镜像，如 Docker pull centos ，从镜像仓库拉取</li>
+<li>使用镜像创建容器</li>
+<li>分配文件系统，挂载一个读写层，在读写层加载镜像</li>
+<li>分配网络/网桥接口，创建一个网络接口，让容器和宿主机通信</li>
+<li>容器获取IP地址</li>
+<li>执行容器命令，如：/bin/bash</li>
+<li>反馈容器启动结果</li>
+</ul>
+</li>
+<li><p>安装Docker：提前准备好一个宿主机（用vmware去创建一个linux机器，然后安装Docker去使用）</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-number">1</span>. 移除旧的或错误的 Docker 源配置<br>sudo rm /etc/apt/sources.list.d/docker.list  <span class="hljs-comment"># 删除可能存在的错误配置</span><br><br><span class="hljs-number">2</span>. 添加 Docker 官方 GPG 密钥<br>curl -fsSL https:<span class="hljs-regexp">//d</span>ownload.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg<br><br><span class="hljs-number">3</span>. 添加 Docker 官方软件源<br>echo <span class="hljs-string">"deb [arch=<span class="hljs-variable">$(</span>dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu <span class="hljs-variable">$(</span>lsb_release -cs) stable"</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; <span class="hljs-regexp">/dev/null</span><br><br><span class="hljs-number">4</span>. 更新软件包索引<br>sudo apt update<br><br><span class="hljs-number">5</span>. 再次尝试安装 Docker<br>sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br><br>验证安装结果<br>sudo docker run hello-world<br><br><span class="hljs-number">6</span>. 配置 Docker 镜像加速（可选），我使用的是阿里云<br>sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">'EOF'</span><br>{<br>  <span class="hljs-string">"registry-mirrors"</span>: [<span class="hljs-string">"https://qyef4ruk.mirror.aliyuncs.com"</span>]<br>}<br>EOF<br><br>重启 Docker 服务：<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br><br>查看 Docker 服务状态<br>sudo systemctl status docker<br><br>查看版本<br><span class="hljs-comment"># docker --version</span><br>Docker version <span class="hljs-number">28.3</span>.<span class="hljs-number">2</span>, build 578ccf6<br><br><span class="hljs-comment"># 将其它用户添加到docker组，使其它用户也能执行docker命令</span><br>usermod -aG docker lxls<br><span class="hljs-comment"># 移除一个组的用户命令，</span><br>sudo gpasswd -d lxls root<br>Removing user lxls from group root<br><span class="hljs-comment"># 查看是否还在该组内：</span><br>groups lxls<br>lxls : lxls adm cdrom sudo dip plugdev lxd docker<br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h1 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h1><ul>
+<li>查看docker服务信息：docker info</li>
+</ul>
+<p><strong>获取、查看、删除镜像</strong></p>
+<ul>
+<li><p>搜索镜像：docker search nginx 国内需要加上加速镜像站地址，docker search docker.1ms.run/nginx</p>
+</li>
+<li><p>下载镜像： docker pull nginx  下载指定版本镜像，docker pull nginx:1.26.0</p>
+</li>
+<li><p>查看所有镜像： docker images</p>
+</li>
+<li><p>删除镜像（可根据名字或id来删除）：docker  rmi  e784f4560448</p>
+</li>
+<li><p>批量删除多个镜像：docker rmi  ‘docker images -aq’  或者 docker rmi $(docker images -aq)</p>
+</li>
+<li><p>查看镜像的详细信息：docker inspect 镜像id</p>
+</li>
+<li><p>查看镜像的构建历史：docker history 镜像id</p>
+</li>
+</ul>
+<p><strong>导出、导入镜像</strong></p>
+<ul>
+<li>提交变化后的容器，打包成新的镜像：docker commit -m “news message”   容器id   新的镜像名</li>
+<li>保存镜像为tar包文件（方便传输给别人）：docker save -o mynginx.tar mynginx:v1.0</li>
+<li>加载tar包文件成为docker镜像：docker load -i mynginx.tar</li>
+</ul>
+<p><strong>容器管理</strong></p>
+<ul>
+<li><p>创建+启动容器：docker run 镜像名，如果镜像不存在本地，则会在线去下载该镜像，这也是前台运行容器，运行时会占用一个终端屏幕，显示实时信息。</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs perl">运行一个容器并进入容器内面：<br>docker run -it afb6fca bash<br><span class="hljs-comment">#参数解释 -i 交互式命令操作；-t 开启一个终端；afb6fca 是镜像的id；bash 进入容器后，使用的解释器</span><br><span class="hljs-comment">#重要的三个参数：-d 后台启动；-p 端口映射；--name 容器名</span><br><span class="hljs-comment">#退出容器</span><br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>查看运行中的容器：docker ps</p>
+</li>
+<li><p>查看所有容器（包括停止、挂掉的容器）：docker ps -a</p>
+</li>
+<li><p>查看容器内的进程信息：docker top 容器id</p>
+</li>
+<li><p>停止容器：docker stop nginx</p>
+</li>
+<li><p>启动容器：docker start 592</p>
+</li>
+<li><p>重启容器：docker restart 592</p>
+</li>
+<li><p>查看容器资源占用情况：docker stats 592</p>
+</li>
+<li><p>查看容器日志：docker logs -f  592   # -f 表示实时刷新日志</p>
+</li>
+<li><p>查看容器的详细信息：docker  inspect 容器id</p>
+</li>
+<li><p>删除指定容器：docker rm 592</p>
+</li>
+<li><p>强制删除指定容器（正在运行的容器）：docker rm -f 592</p>
+</li>
+<li><p>批量删除容器：docker rm ‘docker ps -aq’  或者 docker rm $(docker ps -aq)</p>
+</li>
+<li><p>后台启动容器：docker run -d –name mynginx nginx</p>
+</li>
+<li><p>后台启动并暴露端口：docker run -d –name mynginx -p 80:80 nginx</p>
+</li>
+<li><p>进入一个已经运行的容器内部（后台运行的容器）：docker exec -it myngix /bin/bash</p>
+</li>
+<li><p>将容器内的数据拷贝到宿主机上：docker cp 容器id:容器内目录  目的的主机路径</p>
+</li>
+</ul>
+<p><strong>将镜像发布到社区，供别人pull使用：</strong></p>
+<ul>
+<li><p>登录docker hub：docker login  # 这里只是进入网页登录界面，后面会再提示需要输入用户名和密码</p>
+</li>
+<li><p>重新给镜像打标签：docker tag mynginx:v1.0 cffljx/mynginx:v1.0  #docker官方对镜像取名有格式要求</p>
+</li>
+<li><p>推送镜像：docker push cffljx/mynginx:v1.0</p>
+</li>
+</ul>
+<h1 id="镜像分层原理"><a href="#镜像分层原理" class="headerlink" title="镜像分层原理"></a>镜像分层原理</h1><ul>
+<li><p>Docker通过联合文件系统（union file system），将镜像不同的每一层，整合成一个文件系统，为用户隐藏了多层的视角。当通过一个image启动容器时，docker会在该image最顶层，添加一个可读写文件系统作为容器，然后运行该容器。</p>
+</li>
+<li><p>只读镜像，不能修改，包括：</p>
+<ul>
+<li>宿主机提供linux内核：boot-file system（bootfs）Linux内核，bootfs主要包含bootloader和kernel，bootloader主要引导加载kernel，Linux启动时会加载bootfs文件系统</li>
+<li>docker获取基础镜像：rootfs（root-file system）Linux发行版，rootfs在bootfs之上，包含的就是典型Linux系统中的/dev、/proc、/bin、/etc等标准目录和文件。rootfs就是各种不同操作系统的发行版，比如ubuntu、centos等等</li>
+<li>依赖环境1：其它镜像，如：jdk</li>
+<li>依赖环境2：其它镜像，如tomcat</li>
+</ul>
+</li>
+<li><p>容器层、可写层：如代码修改后，重启容器生效。</p>
+<ul>
+<li>具体的程序运行：可以写入的容器，如你想运行的代码程序</li>
+</ul>
+</li>
+<li><p>镜像定义：docker镜像不包含linux内核，和宿主机共用。</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs perl">如果我们想定义一个mysql5.<span class="hljs-number">6</span>镜像，我们需要这么做：<br><span class="hljs-number">1</span>.获取基础镜像，选择一个发行版平台（ubuntu、centos)<br><span class="hljs-number">2</span>.在基础镜像中安装mysql5.<span class="hljs-number">6</span>软件<br><span class="hljs-number">3</span>.导出镜像，命令为mysql5.<span class="hljs-number">6</span>镜像文件<br><span class="hljs-comment"># 从这个过程，我们可以感觉出这是一层一层的添加的，docker的层级概念就出来了，底层是centos镜像，上层是mysql镜像，centos镜像层属于父镜像。</span><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>可写的容器层：当容器启动后，一个新的可写层被加载到镜像的顶部，这一层通常被称为 容器层，容器层下的都称为 镜像层。所有对容器的修改动作，都只会发生在 容器层 里，只有 容器层 是可写的，其余  镜像层 都是只读的。</p>
+<table>
+<thead>
+<tr>
+<th>文件操作</th>
+<th>说明（都是在容器层中进行的）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>添加文件</td>
+<td>在容器中创建文件时，新文件被添加到容器层中</td>
+</tr>
+<tr>
+<td>读取文件</td>
+<td>在容器中读取某个文件时，Docker会从上往下依次在各镜像层中查找此文件，一旦找到，立即将其复制到容器层，然后打开并读入内存</td>
+</tr>
+<tr>
+<td>修改文件</td>
+<td>在容器中修改已存在的文件时，Docker会从上往下依次在各镜像层中查找此文件，一旦找到，立即将其复制到容器层，然后修改之</td>
+</tr>
+<tr>
+<td>删除文件</td>
+<td>在容器中删除文件时，Docker也是从上往下依次在镜像层中查找此文件，找到后，会在容器层中记录下此删除操作。（只作记录删除操作）</td>
+</tr>
+</tbody></table>
+<p>只有当需要修改时才会复制一份数据，这种特性被称为Copy-on-Write（写时复制特性）。可见，容器层保存的是镜像变化的部分，不会对镜像本身进行任何修改。所以镜像层都是只读的，可以被多个容器共享。</p>
+</li>
+</ul>
+<h1 id="镜像定制Dockerfile"><a href="#镜像定制Dockerfile" class="headerlink" title="镜像定制Dockerfile"></a>镜像定制Dockerfile</h1><p>dockerfile相当于一个脚本，通过dockerfile自己的指令，来构建软件依赖，文件依赖、存储等等，用于构建docker镜像，部署一个用于运行你所需的容器环境。</p>
+<p>dockerfile主要组成部分：</p>
+<ul>
+<li>基础镜像信息 FROM centos:6.8</li>
+<li>制作镜像操作指令 RUN yum install opeenssh-server -y</li>
+<li>容器启动后要执行的指令 CMD [“/bin/bash”]</li>
+</ul>
+<p><strong>容器能够运行，必须在容器内有一个进程在前台执行。</strong></p>
+<p>dockerfile指令：</p>
+<ul>
+<li><p>FROM  这个镜像的妈妈是谁？（指定基础镜像）</p>
+</li>
+<li><p>MAINTAINER 告诉别人，谁负责养它？（指定维护者信息，可没有）</p>
+</li>
+<li><p>RUN 你想让它干什么（在命令前面加上RUN即可）</p>
+</li>
+<li><p>ADD 添加宿主机的文件到容器内，还多了一个自动解压功能</p>
+</li>
+<li><p>COPY 作用和ADD一样，都是拷贝宿主机的文件到容器内，COPY就是仅仅拷贝</p>
+</li>
+<li><p>WORKDIR 我是 cd ，今天刚化了妆（设置当前工作目录）</p>
+</li>
+<li><p>VOLUME 给它一个存放行李的地方（设置卷，挂载主机目录）</p>
+</li>
+<li><p>EXPOSE 它要打开的门是啥（指定对外端口），在容器内暴露一个端口</p>
+</li>
+<li><p>CMD 奔跑吧，兄弟（指定容器启动后的要干的事情）</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-comment"># 实例 </span><br><span class="hljs-comment"># 1.创建一个 dockerfile 文件，内容如下</span><br>FROM nginx<br>RUN echo <span class="hljs-string">'&lt;meta charse=utf-8&gt;阿布用docker运行nginx服务'</span> &gt; <span class="hljs-regexp">/usr/s</span>hare/nginx/html/index.html<br><br><span class="hljs-comment"># 2.构建dockerfile</span><br>docker build .<br><br><span class="hljs-comment"># 3.修改一下镜像名字</span><br>docker tag 镜像id cffljx/my_nginx<br><br><span class="hljs-comment"># 4.运行该镜像</span><br>docker run -d -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> cffljx/my_nginx<br><br><span class="hljs-comment"># 5.查看宿主机的80端口</span><br>http:<span class="hljs-regexp">//</span>宿主机IP地址<br></code></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs assembly">CMD ["参数1","参数2"]<br>CMD ["/bin/bash"]<br>#该容器运行时执行的命令，等同于命令行的直接操作，docker run -it centos cat /etc/os-release<br>CMD ["cat","/etc/os-release"]<br><br># 注意：docker不是虚拟机的概念，虚拟机里的程序运行，基本上都是在后台运行，利用systemctl运行，但容器内没有后台进程的概念，必须在前台运行。<br># 容器就是为了主进程而存在的，主进程退出了，容器也就失去意义，自动退出。<br>所以：CMD systemctl start nginx 写法是错误的，容器会立即退出。<br>因为 systemctl start nginx 是希望以守护进程形式启动nginx,且命令会转化为：<br>CMD ["sh","-c","systemctl start nginx"]<br>这样的命令主进程是 sh 解释器，执行完毕后立即结束了，因此容器也就退出了。<br>正确写法如下：<br>CMD ["nginx","-g","daemon off;"]<br><br>ENTRYPOINT 的作用和 CMD 一样，都是在指定容器启动程序以及参数<br>当指定了 ENTRYPOINT 之后，CMD指令的语义就有了变化，而是把CMD的内容当作参数传递给 ENTRYPOINT 指令<br>简单讲就是 docker启动命令时，如果用的是CMD指令后面再加参数，就会替换前面CMD命令和参数，而ENTRYPOINT指令的话，能加参数，与前面的参数一起工作。<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>ARG和ENV命令：设置环境变量</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl">ENV NAME=<span class="hljs-string">"cffljx"</span><br>后续所有的操作，通过 <span class="hljs-variable">$NAME</span> 就可以直接获取变量值。<br>ARG和ENV一样，设置环境变量，区别在于 ENV 无论在构建镜像时，还是容器运行，该变量都可以使用；而 ARG 只是用于构建镜像需要设置的变量，容器运行时就消失了。 <br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>VOLUME</p>
+<p>容器在运行时，应该保证在存储层不写入任何数据，运行在容器内产生的数据，我们推荐是挂载，写入到宿主机上，进行维护。这时就要用到 VOLUME 参数</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs perl">VOLUME /data <span class="hljs-comment">#将容器内的/data文件夹，在容器运行时，该目录自动挂载为匿名卷，任何向该目录中写入数据的操作，都不会被容器记录，保证容器存储层无状态理念。</span><br><span class="hljs-comment"># Dockerfile</span><br>FROM centos<br>MAINTAINER cffljx<br>VOLUME [<span class="hljs-string">"/data1"</span>,<span class="hljs-string">"/data2"</span>]<br><span class="hljs-comment"># 该容器运行时候，这2个目录自动和宿主机的目录做好映射关系</span><br>通过命令：docker  inspect <span class="hljs-number">2018</span> 查看内面的<br><span class="hljs-string">"Mounts"</span>: [],<br>内容，就能知道挂载在宿主机的哪个地方<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>EXPOSE ：指定容器运行时对外提供的端口服务</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl">docker port 容器<br>docker run -p 宿主机端口:容器端口<br>docker run -P <span class="hljs-comment"># 作用是随机宿主机端口:容器内端口</span><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>WORKDIR：用于在dockerfile中，目录的切换，更改工作目录</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs perl">WORKDIR　/opt<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>USER：用于改变环境，用于切换用户</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs perl">USER root<br>USER cffljx<br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h1 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h1><figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs perl">两种方式，注意区分：<br><span class="hljs-number">1</span>.目录挂载：-v /app/nghtml:<span class="hljs-regexp">/usr/s</span>hare/nginx/html<br><span class="hljs-comment">#目录挂载是将宿主机的文件映射到容器内，容器内原来的文件消失不见，全部与外面的宿主机文件一样</span><br><span class="hljs-number">2</span>.卷映射： -v ngconfig:<span class="hljs-regexp">/etc/nginx</span><br><span class="hljs-comment">#卷映射分为具名挂载，-v 卷名:容器目录名;和匿名挂载, -v 容器目录名，匿名挂载会自动生成一个卷名</span><br><span class="hljs-comment">#卷映射是将容器内的文件映射到外面宿主机中，容器内原来的文件还在，并且外面的宿主机中也有和容器内一样的文件。同时卷 ngconfig 统一放在宿主机的 /var/lib/docker/volumes目录下面,容器/etc/nginx目录内的文件，对应在 /var/lib/docker/volumes/ngconfig/_data 目录内</span><br><span class="hljs-comment">#以上二种方法可以保证容器内的数据不会丢失,并解决了直接进到容器内，不方便修改文件数据的麻烦。</span><br>卷挂载时的文件处理规则：<br><span class="hljs-number">1</span>.宿主机目录存在，容器内目录为空。结果：宿主机目录内容会 <span class="hljs-string">"填充"</span> 到容器内挂载点<br><span class="hljs-number">2</span>.宿主机目录存在，容器内目录有内容。结果：容器内原有内容被 <span class="hljs-string">"隐藏"</span>，无法访问（但未删除）<br><span class="hljs-number">3</span>.宿主机目录不存在。结果：Docker 会自动创建该目录<br><br><span class="hljs-comment">#查看卷命令：</span><br>docker volume ls<br>DRIVER    VOLUME NAME<br><span class="hljs-keyword">local</span>     hexo_data<br><span class="hljs-keyword">local</span>     my_hexo_data<br><br><span class="hljs-comment">#创建卷：</span><br>docker volume cffljx <span class="hljs-comment">#创建了一个名为cffljx的卷，宿主机会统一放到/var/lib/docker/volumes目录下</span><br><br><span class="hljs-comment">#查看卷的详细信息：</span><br>docker volume inspect my_hexo_data<br>[<br>    {<br>        <span class="hljs-string">"CreatedAt"</span>: <span class="hljs-string">"2025-07-30T17:28:37+08:00"</span>,<br>        <span class="hljs-string">"Driver"</span>: <span class="hljs-string">"local"</span>,<br>        <span class="hljs-string">"Labels"</span>: null,<br>        <span class="hljs-string">"Mountpoint"</span>: <span class="hljs-string">"/var/lib/docker/volumes/my_hexo_data/_data"</span>,  <span class="hljs-comment">#这里是卷的位置</span><br>        <span class="hljs-string">"Name"</span>: <span class="hljs-string">"my_hexo_data"</span>,<br>        <span class="hljs-string">"Options"</span>: null,<br>        <span class="hljs-string">"Scope"</span>: <span class="hljs-string">"local"</span><br>    }<br>]<br></code></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>日常工作中，使用卷映射到宿主机上的目录在固定位置，不太灵活，不如使用目录挂载。但配置文件目录挂载要先做好相关准备工作，否则容器启动会失败。例如，将容器的 /etc/nginx 目录（内含配置文件）映射到宿主机，需要注意必须先确保宿主机目录包含完整的 nginx 配置文件，否则直接挂载空目录会覆盖容器内默认配置，导致 nginx 启动失败。正确操作步骤如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs assembly">1. 先在宿主机创建目录，用于存放 nginx 配置<br>mkdir -p /path/on/host/nginx  # 替换为宿主机实际路径，如 ~/nginx-config<br>2. 从 nginx 容器中复制默认配置到宿主机目录<br>先临时启动一个 nginx 容器，将容器内 /etc/nginx 的所有文件复制到宿主机目录（确保配置完整）：<br># 临时启动容器（--rm 表示退出后删除）<br>docker run --rm -d --name temp-nginx nginx<br><br># 复制容器内 /etc/nginx 所有文件到宿主机目录<br>docker cp temp-nginx:/etc/nginx/. /path/on/host/nginx/<br><br># 停止临时容器（会自动删除）<br>docker stop temp-nginx<br>此时宿主机的 /path/on/host/nginx 已包含完整的默认配置（与容器内一致）。<br><br>3. 挂载目录并启动容器<br>通过 -v 参数将宿主机目录挂载到容器的 /etc/nginx，确保配置文件完整，nginx 可正常运行：<br>用 docker run 启动：<br>docker run -d --name my-nginx -p 80:80 -v /path/on/host/nginx:/etc/nginx nginx <br># 挂载宿主机目录到容器内 /etc/nginx<br>  <br>用 Docker Compose 配置：<br>yaml<br>services:<br>  nginx:<br>    container_name: my-nginx<br>    image: nginx<br>    ports:<br>      - "80:80"<br>    volumes:<br>      - /path/on/host/nginx:/etc/nginx  # 挂载配置目录<br>    restart: always<br>    <br>关键注意事项：<br>必须先复制默认配置：<br>容器内的 /etc/nginx 包含 nginx 运行必需的配置文件（如 nginx.conf、conf.d/ 目录等），直接挂载空目录会覆盖这些文件，导致 nginx 因缺少配置而启动失败。<br>权限问题：<br>确保宿主机目录 /path/on/host/nginx 的权限允许容器内的 nginx 用户（通常是 nginx 或 www-data）访问，必要时调整权限：<br>chmod -R 755 /path/on/host/nginx  # 临时放宽权限测试<br><br>修改配置后需重启容器：<br>在宿主机修改 /path/on/host/nginx 下的配置文件后，需重启容器使配置生效：<br>docker restart my-nginx<br><br>通过以上步骤，既能将 /etc/nginx 映射到宿主机方便管理配置，又能保证 nginx 正常运行。核心是先确保宿主机目录包含完整的默认配置，再进行挂载。<br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h1 id="数据卷容器"><a href="#数据卷容器" class="headerlink" title="数据卷容器"></a>数据卷容器</h1><p>当一个容器内创建了卷时，称为数据卷容器。容器之间可以通过继承关系来实现各容器之间的数据同步共享。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs assembly"># 实例<br># 创建一个dockerfile文件，内容如下：<br>FROM centos<br>VOLUME ["volume01","volume02"]<br>CMD echo "---end---"<br>CMD /bin/bash<br># 根据dockerfile文件创建一个镜像<br>docker build -f dockerfile -t cffljx/centos:1.0<br># 这时启动cffljx/centos:1.0镜像成容器后，这个容器内面就有二个卷：volume0和volume02<br>docker run -it --name docker01  cffljx/centos:1.0<br># 再以cffljx/centos:1.0镜像启动第二个容器，就能以继承第一个容器的卷：volume0和volume02<br>docker run -it --name docker02 --volumes-from docker01 cffljx/centos:1.0<br># 这时候就实现了容器之间的数据共享和同步，同时容器卷之间是双向拷贝同步的，一个卷删除后，其它卷的数据不会丢失<br><br># 实例二：多个mysql实现数据共享<br>docker run -d -p 3306:3306 -v /etc/mysql/conf.d -v /var/lib/mysql -e MYSQL_ROOT_PASSWORD=12345 --name mysql01 mysql:5.7<br><br>docker run -d -p 3306:3306  -e MYSQL_ROOT_PASSWORD=12345 --name mysql02 --volumes-form mysql01 mysql:5.7<br># 这个时候，也可以实现两个容器数据同步<br># 结论：容器之间配置信息的传递，数据卷容器的生命周期一直持续到没有容器使用为止。但是一旦你持久化到了本地，这个时候，本地的数据是不会删除的！<br></code></pre></td></tr></tbody></table></figure>
+
+<h1 id="容器启动流程"><a href="#容器启动流程" class="headerlink" title="容器启动流程"></a>容器启动流程</h1><p>docker run 启动容器的时候，docker后台操作流程是：</p>
+<ul>
+<li><p>检查本地是否有该镜像，没有就下载</p>
+</li>
+<li><p>利用镜像创建且启动一个容器</p>
+</li>
+<li><p>分配容器文件系统，在只读的镜像层挂载读写层</p>
+</li>
+<li><p>宿主机的网桥接口会分配一个虚拟接口到容器中</p>
+</li>
+<li><p>容器获得地址池里的ip地址</p>
+</li>
+<li><p>执行用户指定的程序</p>
+</li>
+<li><p>若程序里没有进程在运行，容器执行完毕后立即终止</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs perl">docker start 可以启动一个处于 stop 状态的容器<br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<p>**最佳实践：**命令+以下三项（都需要参考官方镜像的说明来进行编写）</p>
+<ul>
+<li>网络：需不需要将容器端口暴露在外面</li>
+<li>存储：配置和数据持久化需要</li>
+<li>环境变量：给容器运行需要的基本变量值</li>
+</ul>
+<h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><p>掌握网络机制，才能轻松构建集群。</p>
+<ul>
+<li><p>docker服务启动后，会生成一个docker0的网卡，地址为172.17.0.1，以后每个容器运行时docker都会分配一个172.17.0.X 的地址给容器，并加入到这个网卡的网络中。</p>
+</li>
+<li><p>各容器之间通过容器ip+容器端口可以互相访问。</p>
+</li>
+<li><p>因为各容器运行时的ip是动态变化的，我们可以通过主机域名访问的方式来访问容器。</p>
+</li>
+<li><p>docker0网络不支持主机域名，我们可以通过自定义网络来解决这个问题。</p>
+</li>
+<li><p>创建自定义网络，如 mynet ，容器名就是稳定域名。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs assembly"># 创建自定义网络命令：<br>docker network create mynet<br>8452e1c4db05397e60fc1200e4f7e188b236e217b0f754e1f30b5057f1c90749<br><br># 查看docker网络命令：<br>docker network ls<br>NETWORK ID     NAME      DRIVER    SCOPE<br>4fa58b08a8e2   bridge    bridge    local<br>3ed18df33c8e   host      host      local<br>8452e1c4db05   mynet     bridge    local<br>bd723318f340   none      null      local<br><br># 启动二个容器加入自定义网络的：<br>docker run -d -p 80:80 --name app1 --network mynet nginx<br>docker run -d -p 80:80 --name app2 --network mynet nginx<br><br># 这时，进入到容器app1中,就可以通过容器名访问了<br>docker exec -it app1 bash<br>curl http://app2:80<br><br># 也可以直接将容器加入指定网络中，实现跨网络连通<br>docker network connect mynet 容器名<br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>实例：Redis主从同步集群</p>
+</li>
+<li><p>容器带来的网卡，都是一对对的，evth-pair 就是一对的虚拟设备接口，它们都是成对出现的，一段连着协议，一段彼此相连。因为有这个特性，evth-pair 充当一个桥梁，连接各种虚拟网络设备的。openstac,Docker容器之间的连接，OVS的连接，都是使用 evth-pair 技术</p>
+</li>
+<li><p>所有的容器在不指定网络的情况下，都是 docker0 路由的，docker 会给我们的容器分配一个默认的可用IP 。</p>
+</li>
+<li><p>Docker 使用的是 Linux 桥接，宿主机中是一个Docker容器的网桥 docker0 ，容器间通讯都是通过docker0转接通信的，并不是直接互联。</p>
+</li>
+<li><p>Docker 中所有的网络接口都是虚拟的，虚拟的转发效率高。当容器删除后，对应网桥一对就没有了。</p>
+</li>
+<li><p>容器互联参数 –link 就是我们在hosts配置中增加了一条  ip地址  容器名  的记录，目前不建议使用了，我们推荐使用自定义网络</p>
+</li>
+</ul>
+<h1 id="Compose批量管理容器工具"><a href="#Compose批量管理容器工具" class="headerlink" title="Compose批量管理容器工具"></a>Compose批量管理容器工具</h1><p>compose（创作，撰写），使用docker compose时，需要先准备一个 compose.yaml 文件，接下来将你需要启动的所有容器的配置都写入这个文件内。</p>
+<ul>
+<li>上线：docker compose up -d  #用在第一次创建并启动</li>
+<li>下线：docker compose down</li>
+<li>启动：docker compose start x1 x2 x3   # 用在之前启动过，x代表在compose.yaml中配置的应用</li>
+<li>停止：docker compose stop x1 x2 x3   # 把这些应用停止</li>
+<li>扩容：docker compose scale x2=3  # 把x2应用启动3份</li>
+</ul>
+<p><strong>compose.yaml文件语法格式</strong>：</p>
+<ul>
+<li>顶级元素<ul>
+<li>name：名字，这次应用部署的名字</li>
+<li>services：服务，需要部署的服务，服务代表将要启动的每一个应用</li>
+<li>networks：网络，启动的应用要用到哪个网络</li>
+<li>volumes：卷，启动的应用要用到哪些卷</li>
+<li>configs：配置</li>
+<li>secrets：密钥</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs assembly">name: myblog<br>services:<br>     mysql:<br>         container_name: mysql # 容器不定义名字时，ymal文件运行后会自动赋一个名字<br>         image: mysql:8.0<br>         ports:<br>          - "3306:3306"<br>         environment: # 有多列时采用 - 数组形式，只有一项可以用字典键值形式表示<br>             - MYSQL_ROOT_PASSWORD=123456<br>             - MYSQL_DATABASE=wordpress<br>         volumes:<br>             - mysql-data:/var/lib/mysql #卷挂载方式挂载数据文件<br>             - /app/myconf:/etc/mysql/conf.d #目录挂载方式挂载配置文件<br>         restart: always # 总是会自动重启<br>         networks:<br>          - blog<br>     wordpress:<br>         image: wordpress<br>         ports:<br>          - "8080:80"<br>         environment:<br>         WORDPRESS_DB_HOST: mysql<br>         WORDPRESS_DB_USER: root<br>         WORDPRESS_DB_PASSWORD: 123456<br>         WORDPRESS_DB_NAME: wordpress<br>         volumes:<br>          - wordpress:/var/www/html<br>         restart: always<br>         networks:<br>          - blog<br>         depends_on: # 依赖关系，会先启动<br>          - mysql<br>volumes: #services中用到的卷都要在这里声明<br>     mysql-data:<br>     wordpress:<br>networks: #services中用到的网络都要在这里声明<br>   blog:<br></code></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>启动：docker compose -f compose.yaml up -d  # 如果文件是compose.yaml默认名字，可以省略参数  -f compose.yaml  直接写成  docker compose up -d</li>
+<li>启动后，如果修改了yaml文件内容，再次运行时只会重新开始修改后的容器，原来正常运行的容器不会变。</li>
+<li>停止：docker compose -f compose.yaml -down ，会移除容器和网络，但卷不会移除，下次启动挂载后数据还在。</li>
+<li>如果要移除卷，用命令：docker compose -f compose.yaml down  -v</li>
+<li>查看错误：docker logs 容器的名字</li>
+</ul>
+<h1 id="Dockerfile构建自定义镜像"><a href="#Dockerfile构建自定义镜像" class="headerlink" title="Dockerfile构建自定义镜像"></a>Dockerfile构建自定义镜像</h1><p>将自己的应用打包制作成镜像，就要用到 dockerfile ，常见指令如下：</p>
+<ul>
+<li><p>FROM  指定镜像基础环境</p>
+</li>
+<li><p>RUN  运行自定义命令</p>
+</li>
+<li><p>CMD  容器启动命令或参数</p>
+</li>
+<li><p>LABEL  自定义标签</p>
+</li>
+<li><p>EXPOSE  指定暴露端口</p>
+</li>
+<li><p>ENV  环境变量</p>
+</li>
+<li><p>ADD  添加文件到镜像</p>
+</li>
+<li><p>COPY 复制文件到镜像</p>
+</li>
+<li><p>ENTRYPOINT 容器固定启动命令</p>
+</li>
+<li><p>VOLUME 数据卷</p>
+</li>
+<li><p>USER  指定用户和用户组</p>
+</li>
+<li><p>WORKDIR  指定默认工作目录</p>
+</li>
+<li><p>ARG  指定构建参数</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs assembly">#构建实例一般分4步<br># 1.编写dockerfile文件，添加以下指令<br>FROM openjdk:17<br>LABEL author=cffljx<br>COPY app.jar /app.jar<br>EXPOSE 8080<br>ENTRYPOINT ["java","-jar","/app.jar"]<br><br>#2.docker build 构建成为一个镜像，下面命令中，-t 表示tag镜像名，最后的 . 确定构建时的层级不能省略。<br>docker build -f dockerfile -t myjavapp:v1.0 .<br><br># 3.docker run 运行镜像<br><br># 4.docer push 发布镜像到 DockerHub等仓库，供别人下载使用<br><br># 实例测试：创建一个自己的centos<br># Docker Hub中99%镜像都是从这个基础镜像过来的 FROM scratch ，然后配置需要的软件和配置来进行构建<br># 1.编写一个文件:mydockerfile-centos<br>FROM　centos<br>MAINTAINER cffljx&lt;cffljx@126.com&gt;<br><br>ENV MYPATH /usr/local<br>WORKDIR $MYPATH<br><br>RUN yum -y install vim<br>RUN yum -y install net-tools<br><br>EXPOSE 80<br><br>CMD echo $MYPATH<br>CMD echo "---end---"<br>CMD /bin/bash<br><br># 2.通过这个文件构建镜像<br>docker build -f mydockerfile-centos -t mycentos:0.1 .<br><br># 3.测试运行<br>docker run -it mycentos:0.1<br></code></pre></td></tr></tbody></table></figure></li>
+</ul>
+<p><strong>我们拿到一个镜像，可以通过 docker history 镜像id 来学习它是怎样构建的</strong></p>
+<ul>
+<li>docker history --no-trunc --format "table {{.CreatedBy}}" ff20900769a2 </li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Dock学习</div>
+      <div>http://example.com/2025/08/04/Docker/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>阿布</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/03/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
